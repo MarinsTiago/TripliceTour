@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TripliceTour</string>
+    <string name="facebook_app_id">1858384890891162</string>
+    <string name="fb_login_protocol_scheme">fb1858384890891162</string>
+    <string name="login">Login:</string>
+    <string name="senha">Senha:</string>
+    <string name="logar">Logar</string>
+    <string name="obterLogin">criar conta</string>
+    <string name="nome">Nome:</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="edt">Editar</string>
+    <string name="title_activity_cadastro">Cadastro</string>
+    <string name="editar">Editar</string>
+    <string name="consultar">Procurar por id</string>
+    <string name="tipo">Tipo de Usuário:</string>
+    <string name="bemvindo">Bem vindo ao Tríplice Tour</string>
+    <string name="listarTodos">Listar todos os Usuarios</string>
+    <string name="config">Configurações</string>
+    <string name="cadastrarAtualizacao">Atualizar informações</string>
+    <string name="excluir">Excluir Usuario</string>
+</resources>
