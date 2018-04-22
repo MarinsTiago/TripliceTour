@@ -6,33 +6,111 @@
     android:layout_height="match_parent"
     tools:context="com.example.marin.triplicetour.activity.TelaUsuario"
     android:orientation="vertical"
-    android:padding="50dp"
+    android:padding="20dp"
+
+
     >
 
     <EditText
-        android:id="@+id/edtId"
-        android:layout_width="match_parent"
+        android:id="@+id/edtProcuraId"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-    />
+        android:layout_gravity="center"
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/btnConsultarId"
+        android:id="@+id/btnProcuraId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/consultar"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
     />
 
-    <Button
-        android:id="@+id/btnlistarTodos"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/listarTodos"
-        android:layout_marginTop="100dp"
-    />
+        android:text="@string/nome"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edtProcuraNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:gravity="center"
+
+        />
+
+    <EditText
+        android:id="@+id/edtProcuraLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/senha"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edtProcuraSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tipo"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edtProcuraTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:inputType="number" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/atualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastrarAtualizacao"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/excluir"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/excluir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/excluir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/atualizar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
 
     <Button
         android:id="@+id/btnVoltar"
@@ -40,7 +118,6 @@
         android:layout_height="wrap_content"
         android:text="Voltar a tela inicial"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
     />
 
 

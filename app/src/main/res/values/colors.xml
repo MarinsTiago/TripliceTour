@@ -3,6 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="btn">#00BFFF</color>
+    <color name="btn">#000000</color>
     <color name="btnlog">#00BFFF</color>
+    <color name="letrasMain">#000000</color>
+    <color name="cadastro">#4169E1</color>
 </resources>

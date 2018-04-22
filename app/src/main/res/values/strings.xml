@@ -11,11 +11,11 @@
     <string name="edt">Editar</string>
     <string name="title_activity_cadastro">Cadastro</string>
     <string name="editar">Editar</string>
-    <string name="consultar">Procurar por id</string>
+    <string name="consultar">Procurar id</string>
     <string name="tipo">Tipo de Usuário:</string>
     <string name="bemvindo">Bem vindo ao Tríplice Tour</string>
     <string name="listarTodos">Listar todos os Usuarios</string>
     <string name="config">Configurações</string>
-    <string name="cadastrarAtualizacao">Atualizar informações</string>
-    <string name="excluir">Excluir Usuario</string>
+    <string name="cadastrarAtualizacao">Atualizar</string>
+    <string name="excluir">Excluir</string>
 </resources>

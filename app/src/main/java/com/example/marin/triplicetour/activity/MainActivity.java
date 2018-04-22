@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.marin.triplicetour.model.Usuario;
 import com.example.marin.triplicetour.util.CadastroService;
+import com.facebook.FacebookButtonBase;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 
@@ -24,9 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btn;
     private static final int TESTE = 100;
-    private Button btnList;
     private EditText edtSenha;
-    private EditText edtNome;
+    private EditText edtLogin;
+    private Button btnLogar;
 
 
     @Override
@@ -35,14 +36,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btn = (Button) findViewById(R.id.btnNovaConta);
-        btnList = (Button) findViewById(R.id.listarMain);
+        btnLogar = (Button) findViewById(R.id.btnLogar);
 
-        edtNome = (EditText) findViewById(R.id.edtLog);
+        edtLogin = (EditText) findViewById(R.id.edtLog);
         edtSenha = (EditText) findViewById(R.id.edtSen);
 
         btn.setOnClickListener(this);
-        btnList.setOnClickListener(this);
-       // btnLogar.setOnClickListener(this);
+        btnLogar.setOnClickListener(this);
+
 
     }
 
@@ -51,27 +52,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view.getId() == R.id.btnNovaConta){
             Intent intent = new Intent(MainActivity.this, Cadastro.class);
             startActivityForResult(intent, TESTE);
-        }else if (view.getId() == R.id.listarMain){
-            Intent intent2 = new Intent(MainActivity.this, ListarActivity.class);
-            startActivityForResult(intent2, TESTE);
         }
-
-        /*Login ainda não finalizado
         else if (view.getId() == R.id.btnLogar){
 
-          //  String nome = edtNome.getText().toString();
-            //String senha = edtSenha.getText().toString();
-
-           // final Intent intent = getIntent();
-            //final String nome = intent.getStringExtra("NOME");
-           // final String senha = intent.getStringExtra("SENHA");
-            String nome = edtNome.getText().toString();
+            String login = edtLogin.getText().toString();
             String senha = edtSenha.getText().toString();
 
+            final CadastroService cadastroService = CadastroService.retrofit.create(CadastroService.class);
+            final Call<Boolean> call = cadastroService.logar(login, senha);
 
-            call.enqueue(new Callback<Usuario>() {
+            call.enqueue(new Callback<Boolean>() {
                 @Override
-                public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                public void onResponse(Call<Boolean> call, Response<Boolean> response) {
 
                     if (response.isSuccessful()){
                         Intent intent = new Intent(MainActivity.this, ListarActivity.class);
@@ -80,11 +72,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 @Override
-                public void onFailure(Call<Usuario> call, Throwable t) {
+                public void onFailure(Call<Boolean> call, Throwable t) {
                     Toast.makeText(getBaseContext(), "Erro ao logar", Toast.LENGTH_SHORT).show();
                 }
             });
-        }*/
+        }
 
 
     }

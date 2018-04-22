@@ -6,30 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.example.marin.triplicetour.activity.Cadastro"
     android:orientation="vertical"
-    android:padding="50dp"
+    android:padding="90dp"
+    android:background="@drawable/bg"
     >
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/nome"
-        android:gravity="center"
-        android:layout_marginTop="70dp"
-        />
 
     <EditText
         android:id="@+id/edtNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:gravity="center"
-
+        android:layout_marginTop="85dp"
+        android:padding="10dp"
+        android:background="@drawable/edtoval"
+        android:hint="Digite o nome..."
+        android:textColorHint="@color/letrasMain"
         />
 
     <EditText
@@ -37,13 +27,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/senha"
-        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:background="@drawable/edtoval"
+        android:hint="Digite o login..."
+        android:textColorHint="@color/letrasMain"
         />
 
     <EditText
@@ -52,21 +40,12 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:inputType="textPassword"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:background="@drawable/edtoval"
+        android:hint="Digite a senha..."
+        android:textColorHint="@color/letrasMain"
         />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tipo"
-        android:gravity="center"
-    />
-
-    <EditText
-        android:id="@+id/edtTipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:inputType="number" />
 
     <Button
         android:id="@+id/btnCadastrar"
@@ -74,7 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/cadastrar"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:textColor="@color/btn"
         />
 
 </LinearLayout>

@@ -30,13 +30,13 @@ public interface CadastroService {
     Call<Void> alterarUsuario(@Body Usuario usuario);
 
     @GET("WebServicePI/rest/usuario/pegarporid/{id}")
-    Call<Usuario> pegarPorId(@Path("id") String id);
+    Call<Usuario> pegarPorId(@Path("id") int id);
 
     @GET("WebServicePI/rest/usuario/deletar/{id}")
-    Call<Void> excluirUsuario(@Path("id") String id);
+    Call<Void> excluirUsuario(@Path("id") int id);
 
     @GET("WebServicePI/rest/usuario/checarlogin/{login}/{senha}")
-    Call<Usuario> logar(@Path("login") String login, @Path("senha") String senha);
+    Call<Boolean> logar(@Path("login") String login, @Path("senha") String senha);
 
     public static final Retrofit retrofit = new Retrofit.Builder().baseUrl("http://10.0.2.2:8080/")
             .addConverterFactory(GsonConverterFactory.create()).build();

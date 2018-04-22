@@ -35,7 +35,9 @@ public class EditarUsuario extends AppCompatActivity {
         edtEditTipo = (EditText) findViewById(R.id.edtEditTipo);
 
         final Intent intent = getIntent();
-        final String id = Integer.toString(intent.getIntExtra("ID", 0));
+        final int id = (intent.getIntExtra("ID", 0));
+
+
 
         final CadastroService cadastroService = CadastroService.retrofit.create(CadastroService.class);
         final Call<Usuario> call = cadastroService.pegarPorId(id);
@@ -63,7 +65,7 @@ public class EditarUsuario extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Usuario usuario = new Usuario();
-                usuario.setId(Integer.parseInt(id));
+                usuario.setId(id);
                 usuario.setNome(edtEditNome.getText().toString());
                 usuario.setLogin(edtEditLogin.getText().toString());
                 usuario.setSenha(edtEditSenha.getText().toString());
@@ -74,7 +76,7 @@ public class EditarUsuario extends AppCompatActivity {
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if (response.isSuccessful()){
                             Toast.makeText(getBaseContext(), "Atualização realizada com sucesso!", Toast.LENGTH_SHORT).show();
-                            Intent intent1= new Intent(EditarUsuario.this, ListarActivity.class);
+                            Intent intent1= new Intent(EditarUsuario.this, TelaUsuario.class);
                             startActivityForResult(intent1, VOLTAR);
                         }else{
                             Toast.makeText(getBaseContext(), "Atualização não realizada!", Toast.LENGTH_SHORT).show();
